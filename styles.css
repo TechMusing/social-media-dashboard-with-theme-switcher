@@ -49,17 +49,17 @@ body.light {
 }
 
 /* Header styles */
-header {
+.page-header {
   border-bottom: 1px solid rgba(204, 204, 204, 0.24);
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
 
-header .title {
+.page-header .title {
   font-size: 1.6rem;
   margin-bottom: 0;
 }
-header .subtitle {
+.page-header .subtitle {
   font-size: 1rem;
   margin-top: 0.2rem;
   color: var(--text-dark);
@@ -79,6 +79,8 @@ header .subtitle {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: var(--text-dark);
+  font-weight: bold;
 }
 /* The switch - the box around the slider */
 .switch {
@@ -147,9 +149,14 @@ input:checked + .slider:before {
 .light .slider {
   background: var(--toggle-light);
 }
+
 .light .slider:before {
   left: 2px;
   background-color: var(--background-light);
+}
+
+.light .theme-switcher {
+  color: var(--text-light);
 }
 
 /* Card styles */
@@ -231,6 +238,7 @@ input:checked + .slider:before {
   height: 170px;
   margin-top: 25px;
 }
+
 .social.instagram::before {
   content: "";
   border-radius: 5px;
@@ -242,6 +250,7 @@ input:checked + .slider:before {
   position: absolute;
   z-index: -1;
 }
+
 .social.youtube {
   border-top: 5px solid var(--youtube);
 }
@@ -315,6 +324,22 @@ input:checked + .slider:before {
   .container {
     width: 90%;
     max-width: 1400px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .theme-switcher .switch {
+    margin-left: 20px;
   }
 
   .presence,

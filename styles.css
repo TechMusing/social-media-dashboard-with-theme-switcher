@@ -154,7 +154,8 @@ input:checked + .slider:before {
 
 /* Card styles */
 .card {
-  width: 90%;
+  min-width: 300px;
+  box-sizing: border-box;
   padding: 20px;
   margin: 20px auto;
   border: none;
@@ -168,10 +169,12 @@ input:checked + .slider:before {
 }
 
 /* Social card styles */
+
 .social {
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: space-between;
 }
 
 .social .account {
@@ -210,14 +213,35 @@ input:checked + .slider:before {
   border-top: 5px solid var(--twitter);
 }
 
-/* gradiant border - details https://css-tricks.com/gradient-borders-in-css/ */
-.social.instagram {
-  border-top: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;
-  border-image-source: var(--instagram);
-}
+/* gradient border 
+   - source: https://stackoverflow.com/questions/2717127/gradient-borders 
 
+   Adding the gradient border was more complex than usual because of 
+   the border-radius on the cards.
+
+   Without a border-radius, you can use border-image-source which will
+   accept a linear gradient. However, because the cards have a border
+   radius, I opted for tweaking the size of the instagram card and
+   positioning it over a
+*/
+.social.instagram {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  position: relative;
+  height: 170px;
+  margin-top: 25px;
+}
+.social.instagram::before {
+  content: "";
+  border-radius: 5px;
+  background: var(--instagram);
+  top: -5px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
 .social.youtube {
   border-top: 5px solid var(--youtube);
 }

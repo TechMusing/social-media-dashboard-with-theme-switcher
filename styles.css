@@ -48,13 +48,35 @@ body.light {
   margin: 0 auto;
 }
 
+/* Header styles */
+header {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.24);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+header .title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+header .subtitle {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  color: var(--text-dark);
+}
+
+/* Header styles - light overrides */
+header.light .subtitle {
+  color: var(--text-light);
+}
+
 /* Card styles */
 .card {
   width: 90%;
   padding: 20px;
   margin: 20px auto;
   border: none;
-  border-radius: 5x;
+  border-radius: 5px;
   background: var(--card-background-dark);
 }
 
@@ -71,9 +93,18 @@ body.light {
 }
 
 .social .account {
+  display: flex; /* chose flex to line up the icon and text to center */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 0.7rem;
   color: var(--text-dark);
   margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.social .account-source {
+  margin-right: 10px;
 }
 
 .social .followers {
@@ -97,6 +128,7 @@ body.light {
   border-top: 5px solid var(--twitter);
 }
 
+/* gradiant border - details https://css-tricks.com/gradient-borders-in-css/ */
 .social.instagram {
   border-top: 10px solid;
   border-image-slice: 1;
@@ -148,8 +180,8 @@ body.light {
 
 .stats .stat-source {
   grid-area: source;
-  align-self: end;
-  justify-self: start;
+  align-self: start;
+  justify-self: end;
 }
 
 .stats .stat-change {
@@ -173,8 +205,9 @@ body.light {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 600px) {
   .container {
-    width: 1440px;
+    width: 90%;
+    max-width: 1400px;
   }
 }

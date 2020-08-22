@@ -84,7 +84,7 @@ header .subtitle {
 .switch {
   position: relative;
   display: inline-block;
-  width: 54px;
+  width: 52px;
   height: 26px;
 }
 
@@ -148,6 +148,7 @@ input:checked + .slider:before {
   background: var(--toggle-light);
 }
 .light .slider:before {
+  left: 2px;
   background-color: var(--background-light);
 }
 

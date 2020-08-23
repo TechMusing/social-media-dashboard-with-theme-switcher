@@ -43,6 +43,14 @@ body.light {
   color: var(--alt-text-light);
 }
 
+.diffuse-text {
+  color: var(--text-dark);
+}
+
+.light .diffuse-text {
+  color: var(--text-light);
+}
+
 .container {
   width: 350px;
   margin: 0 auto;
@@ -62,12 +70,6 @@ body.light {
 .page-header .subtitle {
   font-size: 1rem;
   margin-top: 0.2rem;
-  color: var(--text-dark);
-}
-
-/* Header styles - light overrides */
-.light header .subtitle {
-  color: var(--text-light);
 }
 
 /* Dark mode toggle 
@@ -79,7 +81,6 @@ body.light {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: var(--text-dark);
   font-weight: bold;
 }
 /* The switch - the box around the slider */
@@ -193,7 +194,6 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   font-size: 0.7rem;
-  color: var(--text-dark);
   margin-bottom: 0.8rem;
   text-align: center;
 }
@@ -209,7 +209,6 @@ input:checked + .slider:before {
 
 .social .followers-label {
   font-size: 0.6rem;
-  color: var(--text-dark);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin-bottom: 1rem;
@@ -262,15 +261,6 @@ input:checked + .slider:before {
   font-size: 0.8rem;
 }
 
-/* Social card styles - light overrides */
-.light .social .account {
-  color: var(--text-light);
-}
-
-.light .social .followers-label {
-  color: var(--text-light);
-}
-
 /* Overview card styles */
 .overview-cards {
   display: grid;
@@ -285,7 +275,6 @@ input:checked + .slider:before {
 .stats .stat-label {
   grid-area: label;
   font-size: 0.7rem;
-  color: var(--text-dark);
   align-self: start;
   justify-self: start;
 }
@@ -310,11 +299,6 @@ input:checked + .slider:before {
   font-size: 0.6rem;
   align-self: end;
   justify-self: end;
-}
-
-/* Overview card styles - light overrides */
-.light .stats .stat-label {
-  color: var(--text-light);
 }
 
 /* attribution */

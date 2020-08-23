@@ -156,10 +156,6 @@ input:checked + .slider:before {
   background-color: var(--background-light);
 }
 
-.light .theme-switcher {
-  color: var(--text-light);
-}
-
 /* Card styles */
 .card {
   box-sizing: border-box;
